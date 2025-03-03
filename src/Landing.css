@@ -1,0 +1,13 @@
+body{
+    background-color: #FFFBE4;
+
+}
+.land-background{
+    background-color: #FFFBE4;
+}
+
+.word-flex{
+    display: flex;
+    gap: 5px;
+    
+}
