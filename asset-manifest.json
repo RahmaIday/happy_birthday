@@ -1,16 +1,31 @@
 {
   "files": {
-    "main.css": "/happy_birthday/static/css/main.f855e6bc.css",
-    "main.js": "/happy_birthday/static/js/main.52aa68e3.js",
+    "main.css": "/happy_birthday/static/css/main.ab817718.css",
+    "main.js": "/happy_birthday/static/js/main.36b95be6.js",
     "static/js/453.39bf4a51.chunk.js": "/happy_birthday/static/js/453.39bf4a51.chunk.js",
+    "static/media/button-normal.svg": "/happy_birthday/static/media/button-normal.c191356d21bd5cc018c2521960f6de60.svg",
+    "static/media/button-pressed.svg": "/happy_birthday/static/media/button-pressed.47677cb84eb1ca4a9d7e22e154a9448d.svg",
+    "static/media/M.svg": "/happy_birthday/static/media/M.f6722bf4df062ca1901354feb0e0d7d5.svg",
+    "static/media/N.svg": "/happy_birthday/static/media/N.5fb9425672310f4fe26ff31bf3ff19e1.svg",
+    "static/media/R.svg": "/happy_birthday/static/media/R.d941de57562eaf06adb13542f278e1f2.svg",
+    "static/media/B.svg": "/happy_birthday/static/media/B.5e94e63162e2a43cd33ecbd498684931.svg",
+    "static/media/H.svg": "/happy_birthday/static/media/H.7c8ecb8359d623a1eb672f5496caa66c.svg",
+    "static/media/A.svg": "/happy_birthday/static/media/A.aa69d4e7017003f57bc5742b7a10f03e.svg",
+    "static/media/D.svg": "/happy_birthday/static/media/D.950eade6892253856c5186609f0de4d4.svg",
+    "static/media/C.svg": "/happy_birthday/static/media/C.dc34f7e6bc4227f25f7e0cea538264d1.svg",
+    "static/media/P.svg": "/happy_birthday/static/media/P.ae11489894f91ac80b9cdef2b5d774d0.svg",
+    "static/media/Y.svg": "/happy_birthday/static/media/Y.90a350eb329d0404078cbd9cb6a9e3c1.svg",
+    "static/media/I.svg": "/happy_birthday/static/media/I.291388eec630f31f9f3905ace12e104a.svg",
+    "static/media/T.svg": "/happy_birthday/static/media/T.fd885afce7aa384a1be5c87d1c8bc4ad.svg",
+    "static/media/EX.svg": "/happy_birthday/static/media/EX.d1b807481a53183098cd640d728802b1.svg",
     "static/media/logo.svg": "/happy_birthday/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/happy_birthday/index.html",
-    "main.f855e6bc.css.map": "/happy_birthday/static/css/main.f855e6bc.css.map",
-    "main.52aa68e3.js.map": "/happy_birthday/static/js/main.52aa68e3.js.map",
+    "main.ab817718.css.map": "/happy_birthday/static/css/main.ab817718.css.map",
+    "main.36b95be6.js.map": "/happy_birthday/static/js/main.36b95be6.js.map",
     "453.39bf4a51.chunk.js.map": "/happy_birthday/static/js/453.39bf4a51.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f855e6bc.css",
-    "static/js/main.52aa68e3.js"
+    "static/css/main.ab817718.css",
+    "static/js/main.36b95be6.js"
   ]
 }
