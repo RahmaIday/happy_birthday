@@ -3,6 +3,7 @@
     width: auto; /* Maintain aspect ratio */
     max-height: 90px; /* Optional: prevent letters from getting too large */
     animation: letter-bounce 2s ease-in-out infinite; /* 2s duration, repeat forever */
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
 @keyframes letter-bounce {

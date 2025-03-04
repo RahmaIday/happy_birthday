@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import './Landing.css';
 import './global.css';
 import H from './header_font/H.svg';
@@ -23,19 +24,19 @@ import light_balloon from './images/balloon light.svg';
 function Landing() {
   const [buttonImage, setButtonImage] = useState(button_normal);
   const [balloons, setBalloons] = useState([]);
+  const navigate = useNavigate(); // Hook for navigation
 
-  // Generate balloons after the page loads
   useEffect(() => {
-    const numBalloons = 10; // Adjust the number of balloons
+    const numBalloons = 10;
     const newBalloons = [];
-    const spacing = 100 / numBalloons; // Calculate spacing based on the number of balloons
+    const spacing = 100 / numBalloons;
 
     for (let i = 0; i < numBalloons; i++) {
       newBalloons.push({
         id: i,
-        left: `${spacing * i}vw`, // Evenly space balloons across the screen
-        delay: `${Math.random() * 2}s`, // Random delay to start the animation
-        balloonType: i % 2 === 0 ? dark_balloon : light_balloon, // Alternating balloon colors
+        left: `${spacing * i}vw`,
+        delay: `${Math.random() * 2}s`,
+        balloonType: i % 2 === 0 ? dark_balloon : light_balloon,
       });
     }
 
@@ -78,10 +79,11 @@ function Landing() {
           className='start-btn'
           onMouseEnter={() => setButtonImage(button_pressed)}
           onMouseLeave={() => setButtonImage(button_normal)}
-          src={buttonImage} alt="Start Button"
+          onClick={() => navigate('/game')} // Navigate on click
+          src={buttonImage}
+          alt="Start Button"
         />
 
-        {/* Render Balloons */}
         {balloons.map((balloon) => (
           <img
             key={balloon.id}
