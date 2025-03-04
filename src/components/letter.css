@@ -1,3 +1,4 @@
-.main-letter-div{
-    
+.main-letter-div img {
+    height: var(--letter-height-iphone-mini);
+    width: auto;
 }

@@ -2,12 +2,34 @@ body{
     background-color: #FFFBE4;
 
 }
-.land-background{
-    background-color: #FFFBE4;
+
+.landing-phrase-container {
+    width: 60%;
+    display: flex;
+    flex-direction: column; /* Stacks the words vertically */
+    align-items: center; /* Centers the content horizontally */
+    justify-content: center; /* Centers the content vertically */
+    text-align: center; /* Ensures text is centered */
 }
 
-.word-flex{
+.word-flex {
     display: flex;
     gap: 5px;
-    
+}
+
+
+/* start btn styles */
+.start-btn img{
+    width: var(--start-btn-width-iphone-mini);
+    height: auto;
+    display: inline-block;
+    position: relative; /* Allows movement */
+}
+
+.start-btn img {
+    transition: transform 0.2s ease-in-out, top 0.2s ease-in-out;
+}
+
+.start-btn:hover img {
+    top: 8px; /* Moves the image downward */
 }
