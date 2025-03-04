@@ -1,4 +1,6 @@
-.main-letter-div img {
-    height: var(--letter-height-iphone-mini);
-    width: auto;
+.main-letter-div {
+    height: 10vw; /* Responsive height based on viewport width */
+    width: auto; /* Maintain aspect ratio */
+    max-height: 90px; /* Optional: prevent letters from getting too large */
+
 }

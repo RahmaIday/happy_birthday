@@ -1,35 +1,45 @@
-body{
-    background-color: #FFFBE4;
+@font-face {
+    font-family: 'PixelFont'; /* Define a name for the font */
+    src: url('./fonts/pixel-font.otf') format('opentype'); /* Provide the path to the font file */
+    font-weight: normal;
+    font-style: normal;
+}
 
+.full-height-flex {
+    display: flex;
+    align-items: center; /* Centers the content horizontally */
+    flex-direction: column;
+    justify-content: space-between; /* Space between top and bottom divs */
+    height: 70vh; /* Makes the container take up all the available vertical space */
+    background-color: #FFFBE4;
+    padding: 15vh 0;
 }
 
 .landing-phrase-container {
-    width: 60%;
     display: flex;
     flex-direction: column; /* Stacks the words vertically */
     align-items: center; /* Centers the content horizontally */
     justify-content: center; /* Centers the content vertically */
     text-align: center; /* Ensures text is centered */
+    gap: 5vh;
 }
 
 .word-flex {
     display: flex;
     gap: 5px;
+    justify-content: center; /* Centers letters */
+    width: 100%;
 }
 
 
 /* start btn styles */
-.start-btn img{
-    width: var(--start-btn-width-iphone-mini);
+.start-btn{
+    width: 25vw;
+    max-width: 150px;
     height: auto;
-    display: inline-block;
-    position: relative; /* Allows movement */
 }
 
-.start-btn img {
-    transition: transform 0.2s ease-in-out, top 0.2s ease-in-out;
-}
-
-.start-btn:hover img {
-    top: 8px; /* Moves the image downward */
+/* Text below button */
+.explanation-txt{
+    font-family: 'PixelFont';
 }

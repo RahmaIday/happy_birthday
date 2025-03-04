@@ -22,10 +22,11 @@ function Landing() {
     const [buttonImage, setButtonImage] = useState(button_normal);
 
     return (
-        <center>
+    <center>
+        <div className='full-height-flex'>
+            
             <div className='landing-phrase-container'>
-                <br></br>
-
+                
                 <div className='word-flex'>
                     <Letter image_link={H} />
                     <Letter image_link={A} />
@@ -51,18 +52,19 @@ function Landing() {
                     <Letter image_link={A} />
                     <Letter image_link={N} />
                     <Letter image_link={EX} />
-                </div>
-                <br></br>
-                <br></br>
-
-                <div 
+                </div> 
+            </div>
+            
+            <img 
                     className='start-btn' 
                     onMouseEnter={() => setButtonImage(button_pressed)}
                     onMouseLeave={() => setButtonImage(button_normal)}
-                >
-                    <img src={buttonImage} alt="Start Button" />
-                </div>
-            </div>
+                    src={buttonImage} alt="Start Button" 
+            />
+            
+            
+            
+        </div>
         </center>
     );
 }
