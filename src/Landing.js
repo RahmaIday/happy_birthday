@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Landing.css';
 import './global.css';
 import H from './header_font/H.svg';
@@ -17,56 +17,86 @@ import EX from './header_font/EX.svg';
 import Letter from './components/letter';
 import button_pressed from './start_button/button-pressed.svg';
 import button_normal from './start_button/button-normal.svg';
+import dark_balloon from './images/balloon.svg';
+import light_balloon from './images/balloon light.svg';
 
 function Landing() {
-    const [buttonImage, setButtonImage] = useState(button_normal);
+  const [buttonImage, setButtonImage] = useState(button_normal);
+  const [balloons, setBalloons] = useState([]);
 
-    return (
+  // Generate balloons after the page loads
+  useEffect(() => {
+    const numBalloons = 10; // Adjust the number of balloons
+    const newBalloons = [];
+    const spacing = 100 / numBalloons; // Calculate spacing based on the number of balloons
+
+    for (let i = 0; i < numBalloons; i++) {
+      newBalloons.push({
+        id: i,
+        left: `${spacing * i}vw`, // Evenly space balloons across the screen
+        delay: `${Math.random() * 2}s`, // Random delay to start the animation
+        balloonType: i % 2 === 0 ? dark_balloon : light_balloon, // Alternating balloon colors
+      });
+    }
+
+    setBalloons(newBalloons);
+  }, []);
+
+  return (
     <center>
-        <div className='full-height-flex'>
-            
-            <div className='landing-phrase-container'>
-                
-                <div className='word-flex'>
-                    <Letter image_link={H} />
-                    <Letter image_link={A} />
-                    <Letter image_link={P} />
-                    <Letter image_link={P} />
-                    <Letter image_link={Y} />
-                </div>
-                <div className='word-flex'>
-                    <Letter image_link={B} />
-                    <Letter image_link={I} />
-                    <Letter image_link={R} />
-                    <Letter image_link={T} />
-                    <Letter image_link={H} />
-                    <Letter image_link={D} />
-                    <Letter image_link={A} />
-                    <Letter image_link={Y} />
-                </div>
-                <div className='word-flex'>
-                    <Letter image_link={M} />
-                    <Letter image_link={A} />
-                    <Letter image_link={C} />
-                    <Letter image_link={H} />
-                    <Letter image_link={A} />
-                    <Letter image_link={N} />
-                    <Letter image_link={EX} />
-                </div> 
-            </div>
-            
-            <img 
-                    className='start-btn' 
-                    onMouseEnter={() => setButtonImage(button_pressed)}
-                    onMouseLeave={() => setButtonImage(button_normal)}
-                    src={buttonImage} alt="Start Button" 
-            />
-            
-            
-            
+      <div className='full-height-flex'>
+        <div className='landing-phrase-container'>
+          <div className='word-flex'>
+            <Letter image_link={H} />
+            <Letter image_link={A} />
+            <Letter image_link={P} />
+            <Letter image_link={P} />
+            <Letter image_link={Y} />
+          </div>
+          <div className='word-flex'>
+            <Letter image_link={B} />
+            <Letter image_link={I} />
+            <Letter image_link={R} />
+            <Letter image_link={T} />
+            <Letter image_link={H} />
+            <Letter image_link={D} />
+            <Letter image_link={A} />
+            <Letter image_link={Y} />
+          </div>
+          <div className='word-flex'>
+            <Letter image_link={M} />
+            <Letter image_link={A} />
+            <Letter image_link={C} />
+            <Letter image_link={H} />
+            <Letter image_link={A} />
+            <Letter image_link={N} />
+            <Letter image_link={EX} />
+          </div>
         </div>
-        </center>
-    );
+
+        <img
+          className='start-btn'
+          onMouseEnter={() => setButtonImage(button_pressed)}
+          onMouseLeave={() => setButtonImage(button_normal)}
+          src={buttonImage} alt="Start Button"
+        />
+
+        {/* Render Balloons */}
+        {balloons.map((balloon) => (
+          <img
+            key={balloon.id}
+            className='balloon'
+            src={balloon.balloonType}
+            alt="Balloon"
+            style={{
+              left: balloon.left,
+              animationDelay: balloon.delay,
+            }}
+          />
+        ))}
+      </div>
+    </center>
+  );
 }
 
 export default Landing;

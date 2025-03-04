@@ -2,5 +2,32 @@
     height: 10vw; /* Responsive height based on viewport width */
     width: auto; /* Maintain aspect ratio */
     max-height: 90px; /* Optional: prevent letters from getting too large */
-
+    animation: letter-bounce 2s ease-in-out infinite; /* 2s duration, repeat forever */
 }
+
+@keyframes letter-bounce {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-5px); /* Small bounce up */
+    }
+    50% {
+        transform: translateY(0); /* Back to original position */
+    }
+    75% {
+        transform: translateY(5px); /* Small bounce down */
+    }
+    100% {
+        transform: translateY(0); /* Back to original position */
+    }
+}
+
+/* Stagger the animation for each letter
+.main-letter-div:nth-child(even) {
+    animation-delay: 0.2s;
+}
+
+.main-letter-div:nth-child(odd) {
+    animation-delay: 0.4s;
+} */

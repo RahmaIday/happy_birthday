@@ -43,3 +43,37 @@
 .explanation-txt{
     font-family: 'PixelFont';
 }
+
+/* balloon */
+@keyframes floatUp {
+    0% {
+      transform: translateY(100vh); /* Start at the bottom */
+      visibility: visible; 
+    }
+    100% {
+      transform: translateY(-100vh); /* End at the top */
+      visibility: visible; 
+    }
+  }
+  
+  .balloon {
+    position: absolute;
+    bottom: 0; /* Start from the bottom of the page */
+    animation: floatUp 5s ease-in-out forwards; /* The floating animation */
+    animation-duration: 5s;
+    width: 50px; /* Adjust the size of the balloon */
+    height: auto;
+    transition: all 0.5s ease-in-out;
+    visibility: hidden;
+
+  }
+  
+  /* Styling for each balloon, adding a bit of animation randomness */
+  .balloon:nth-child(even) {
+    animation-delay: 0s;
+  }
+  
+  .balloon:nth-child(odd) {
+    animation-delay: 1s; /* Stagger the start time of the animations */
+  }
+  
