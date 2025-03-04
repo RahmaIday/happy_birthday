@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/happy_birthday/static/css/main.0d7b8576.css",
+    "main.css": "/happy_birthday/static/css/main.97fa67c7.css",
     "main.js": "/happy_birthday/static/js/main.03fa27b3.js",
     "static/js/453.39bf4a51.chunk.js": "/happy_birthday/static/js/453.39bf4a51.chunk.js",
     "static/media/button-normal.svg": "/happy_birthday/static/media/button-normal.c191356d21bd5cc018c2521960f6de60.svg",
@@ -23,12 +23,12 @@
     "static/media/EX.svg": "/happy_birthday/static/media/EX.d1b807481a53183098cd640d728802b1.svg",
     "static/media/logo.svg": "/happy_birthday/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/happy_birthday/index.html",
-    "main.0d7b8576.css.map": "/happy_birthday/static/css/main.0d7b8576.css.map",
+    "main.97fa67c7.css.map": "/happy_birthday/static/css/main.97fa67c7.css.map",
     "main.03fa27b3.js.map": "/happy_birthday/static/js/main.03fa27b3.js.map",
     "453.39bf4a51.chunk.js.map": "/happy_birthday/static/js/453.39bf4a51.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0d7b8576.css",
+    "static/css/main.97fa67c7.css",
     "static/js/main.03fa27b3.js"
   ]
 }
