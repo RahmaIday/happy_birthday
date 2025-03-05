@@ -4,6 +4,10 @@
     font-weight: normal;
     font-style: normal;
 }
+body{
+    background-color: #E9F4FF;
+
+}
 
 .full-height-flex {
     display: flex;
@@ -13,6 +17,7 @@
     background-color: #E9F4FF;
     height: 80vh;
     padding: 10vh 0;
+    overflow: hidden;
 }
 
 .landing-phrase-container {
@@ -70,13 +75,12 @@
     }
     100% {
       transform: translateY(-100vh);
-      visibility: visible; 
+      visibility: hidden ;
     }
 }
   
 .balloon {
     position: absolute;
-    bottom: 0;
     animation: floatUp 5s ease-in-out forwards; 
     animation-duration: 5s;
     width: 50px;
