@@ -20,6 +20,7 @@ import button_pressed from './start_button/button-pressed.svg';
 import button_normal from './start_button/button-normal.svg';
 import dark_balloon from './images/balloon.svg';
 import light_balloon from './images/balloon light.svg';
+import yasir from './images/yasir.svg';
 
 function Landing() {
   const [buttonImage, setButtonImage] = useState(button_normal);
@@ -73,8 +74,10 @@ function Landing() {
             <Letter image_link={N} />
             <Letter image_link={EX} />
           </div>
-        </div>
+        <img src={yasir} className='yasir'></img>
 
+        </div>
+        
         <img
           className='start-btn'
           onMouseEnter={() => setButtonImage(button_pressed)}

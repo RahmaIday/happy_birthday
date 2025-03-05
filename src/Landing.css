@@ -11,7 +11,7 @@
     flex-direction: column;
     justify-content: space-between; /* Space between top and bottom divs */
     height: 70vh; /* Makes the container take up all the available vertical space */
-    background-color: #FFFBE4;
+    background-color: #E9F4FF;
     padding: 15vh 0;
 }
 
@@ -31,6 +31,11 @@
     width: 100%;
 }
 
+
+.yasir{
+    height: 20vh;
+    width: auto;
+}
 
 /* start btn styles */
 .start-btn{
