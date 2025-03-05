@@ -1,85 +1,94 @@
 @font-face {
-    font-family: 'PixelFont'; /* Define a name for the font */
-    src: url('./fonts/pixel-font.otf') format('opentype'); /* Provide the path to the font file */
+    font-family: 'PixelFont'; 
+    src: url('./fonts/pixel-font.otf') format('opentype'); 
     font-weight: normal;
     font-style: normal;
 }
 
 .full-height-flex {
     display: flex;
-    align-items: center; /* Centers the content horizontally */
+    align-items: center;
     flex-direction: column;
-    justify-content: space-between; /* Space between top and bottom divs */
-    height: 70vh; /* Makes the container take up all the available vertical space */
+    justify-content: space-between;
     background-color: #E9F4FF;
-    padding: 15vh 0;
+    height: 80vh;
+    padding: 10vh 0;
 }
 
 .landing-phrase-container {
     display: flex;
-    flex-direction: column; /* Stacks the words vertically */
-    align-items: center; /* Centers the content horizontally */
-    justify-content: center; /* Centers the content vertically */
-    text-align: center; /* Ensures text is centered */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     gap: 5vh;
 }
 
 .word-flex {
     display: flex;
     gap: 5px;
-    justify-content: center; /* Centers letters */
+    justify-content: center;
     width: 100%;
 }
 
-
-.yasir{
+.yasir {
+    padding-top: 3vh;
     height: 20vh;
     width: auto;
 }
 
-/* start btn styles */
-.start-btn{
+.jumping {
+    animation: jumpAnimation 1.4s infinite ease-in-out; 
+}
+
+/* Jumping Animation */
+/* Jumping Animation */
+@keyframes jumpAnimation {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px); 
+    }
+}
+
+
+
+/* Start Button */
+.start-btn {
     width: 25vw;
     max-width: 150px;
     height: auto;
     object-fit: contain;
 }
 
-/* Text below button */
-.explanation-txt{
-    font-family: 'PixelFont';
-}
-
-/* balloon */
+/* Balloons */
 @keyframes floatUp {
     0% {
-      transform: translateY(100vh); /* Start at the bottom */
+      transform: translateY(100vh);
       visibility: visible; 
     }
     100% {
-      transform: translateY(-100vh); /* End at the top */
+      transform: translateY(-100vh);
       visibility: visible; 
     }
-  }
+}
   
-  .balloon {
+.balloon {
     position: absolute;
-    bottom: 0; /* Start from the bottom of the page */
-    animation: floatUp 5s ease-in-out forwards; /* The floating animation */
+    bottom: 0;
+    animation: floatUp 5s ease-in-out forwards; 
     animation-duration: 5s;
-    width: 50px; /* Adjust the size of the balloon */
+    width: 50px;
     height: auto;
     transition: all 0.5s ease-in-out;
     visibility: hidden;
+}
 
-  }
-  
-  /* Styling for each balloon, adding a bit of animation randomness */
-  .balloon:nth-child(even) {
+.balloon:nth-child(even) {
     animation-delay: 0s;
-  }
+}
   
-  .balloon:nth-child(odd) {
-    animation-delay: 1s; /* Stagger the start time of the animations */
-  }
-  
+.balloon:nth-child(odd) {
+    animation-delay: 1s; 
+}

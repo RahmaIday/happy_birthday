@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useNavigate } from 'react-router-dom'; 
 import './Landing.css';
 import './global.css';
 import H from './header_font/H.svg';
@@ -21,11 +21,13 @@ import button_normal from './start_button/button-normal.svg';
 import dark_balloon from './images/balloon.svg';
 import light_balloon from './images/balloon light.svg';
 import yasir from './images/yasir.svg';
+import jumping_yasir from './images/jumping_yasir.svg';
 
 function Landing() {
   const [buttonImage, setButtonImage] = useState(button_normal);
   const [balloons, setBalloons] = useState([]);
-  const navigate = useNavigate(); // Hook for navigation
+  const [isJumping, setIsJumping] = useState(false); 
+  const navigate = useNavigate(); 
 
   useEffect(() => {
     const numBalloons = 10;
@@ -42,6 +44,14 @@ function Landing() {
     }
 
     setBalloons(newBalloons);
+  }, []);
+
+  useEffect(() => {
+    const jumpInterval = setInterval(() => {
+      setIsJumping((prev) => !prev); 
+    }, 700); // Toggle every 700ms
+
+    return () => clearInterval(jumpInterval);
   }, []);
 
   return (
@@ -74,15 +84,19 @@ function Landing() {
             <Letter image_link={N} />
             <Letter image_link={EX} />
           </div>
-        <img src={yasir} className='yasir'></img>
 
+          <img 
+            src={isJumping ? yasir : jumping_yasir} 
+            className='yasir jumping' 
+            alt="Yasir"
+          />
         </div>
         
         <img
           className='start-btn'
           onMouseEnter={() => setButtonImage(button_pressed)}
           onMouseLeave={() => setButtonImage(button_normal)}
-          onClick={() => navigate('/happy_birthday/game')} // Navigate on click
+          onClick={() => navigate('/happy_birthday/game')} 
           src={buttonImage}
           alt="Start Button"
         />
