@@ -1,9 +1,9 @@
 .soccer-background {
     background-image: url('./images/Game_background.png');
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height (adjust as needed) */
     background-size: 100% 100%; /* Stretch width to fill, height adjusts automatically */
-  background-position: top center; /* Ensures it stays centered */
-  background-repeat: no-repeat; /* Prevents tiling */
-  width: 100vw; /* Full viewport width */
-  height: 100vh; /* Full viewport height (adjust as needed) */
-  }
+    background-position: top center; /* Ensures it stays centered */
+    background-repeat: no-repeat; /* Prevents tiling */
+}
   
