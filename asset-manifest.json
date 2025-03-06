@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/happy_birthday/static/css/main.072d9be3.css",
+    "main.css": "/happy_birthday/static/css/main.3a29261f.css",
     "main.js": "/happy_birthday/static/js/main.b326b2e1.js",
     "static/js/453.39bf4a51.chunk.js": "/happy_birthday/static/js/453.39bf4a51.chunk.js",
     "static/media/goalie_yasir.svg": "/happy_birthday/static/media/goalie_yasir.c3e2644ef93eac8dd28dc317078c5ab5.svg",
@@ -29,12 +29,12 @@
     "static/media/EX.svg": "/happy_birthday/static/media/EX.d1b807481a53183098cd640d728802b1.svg",
     "static/media/logo.svg": "/happy_birthday/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/happy_birthday/index.html",
-    "main.072d9be3.css.map": "/happy_birthday/static/css/main.072d9be3.css.map",
+    "main.3a29261f.css.map": "/happy_birthday/static/css/main.3a29261f.css.map",
     "main.b326b2e1.js.map": "/happy_birthday/static/js/main.b326b2e1.js.map",
     "453.39bf4a51.chunk.js.map": "/happy_birthday/static/js/453.39bf4a51.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.072d9be3.css",
+    "static/css/main.3a29261f.css",
     "static/js/main.b326b2e1.js"
   ]
 }
