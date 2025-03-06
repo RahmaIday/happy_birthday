@@ -1,11 +1,10 @@
 import React from 'react';
+import './Game.css';
 
 function Game() {
   return (
-    <div>
-      <h1>Welcome to the Game Page!</h1>
+    <div className="soccer-background">
     </div>
   );
 }
-
 export default Game;
