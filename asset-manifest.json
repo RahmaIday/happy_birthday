@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/happy_birthday/static/css/main.4a66bd87.css",
-    "main.js": "/happy_birthday/static/js/main.3f63aeb1.js",
+    "main.js": "/happy_birthday/static/js/main.de0ff19f.js",
     "static/js/453.39bf4a51.chunk.js": "/happy_birthday/static/js/453.39bf4a51.chunk.js",
     "static/media/jumping_cowboy_yasir.svg": "/happy_birthday/static/media/jumping_cowboy_yasir.189bdfdf3559fa12b3adb16e5afa5b17.svg",
     "static/media/yasir_hat.svg": "/happy_birthday/static/media/yasir_hat.93530e2b4f2d475771c5f4f344d9a3da.svg",
@@ -35,11 +35,11 @@
     "static/media/logo.svg": "/happy_birthday/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/happy_birthday/index.html",
     "main.4a66bd87.css.map": "/happy_birthday/static/css/main.4a66bd87.css.map",
-    "main.3f63aeb1.js.map": "/happy_birthday/static/js/main.3f63aeb1.js.map",
+    "main.de0ff19f.js.map": "/happy_birthday/static/js/main.de0ff19f.js.map",
     "453.39bf4a51.chunk.js.map": "/happy_birthday/static/js/453.39bf4a51.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4a66bd87.css",
-    "static/js/main.3f63aeb1.js"
+    "static/js/main.de0ff19f.js"
   ]
 }
