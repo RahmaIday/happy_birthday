@@ -47,11 +47,12 @@ function Game() {
     // Generate soccer balls at random positions at the top of the screen if the game is not over
     if (!gameOver) {
       const interval = setInterval(() => {
+        const BALL_WIDTH_PERCENT = 5; //  ball takes up 5% of screen width
         const newBall = {
           id: Date.now(),
-          x: Math.random() * 100,
+          x: Math.random() * (100 - BALL_WIDTH_PERCENT), // Keeps it fully inside
           y: 0,
-          speed: 0.5 + Math.random(), // Random fall speed
+          speed: 0.5 + Math.random(),
         };
         setSoccerBalls((prevBalls) => [...prevBalls, newBall]);
       }, 1000); // New ball every second
