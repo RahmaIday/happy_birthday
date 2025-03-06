@@ -1,13 +1,67 @@
+@font-face {
+    font-family: 'PixelFont'; 
+    src: url('./fonts/pixel-font.otf') format('opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Arcade'; 
+    src: url('./fonts/ARCADE.TTF') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Score'; 
+    src: url('./fonts/score.otf') format('opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
 .soccer-background {
     background-image: url('./images/Game_background.png');
     width: 100vw; /* Full viewport width */
-    height: 100vh; /* Full viewport height (adjust as needed) */
+    height: 90vh; /* Full viewport height (adjust as needed) */
     background-size: 100% 100%; /* Stretch width to fill, height adjusts automatically */
     background-position: top center; /* Ensures it stays centered */
     background-repeat: no-repeat; /* Prevents tiling */
 }
   
 .NavBar{
+    width: 100vw;
+    height: 10vh;
+    box-sizing: border-box;
+    padding: 1vh 3vw;
     display: flex;
-    
+    justify-content: space-between;
+    align-items: center;
+    background-color: #E6E8E5;
 }
+
+.nav-title{
+    font-family: 'PixelFont';
+    width: 40%;
+    font-size: 8vh;
+}
+
+.scoreboard{
+    border: black solid 2px;
+    padding: 1vh;
+    display: flex;
+    align-items: center;
+    height: 8vh;
+    box-sizing: border-box;
+    gap: 3vh;
+
+}
+
+.soccer-logo{
+    height: 6vh;
+}
+
+.score{
+    font-family: 'Score';
+    font-size: 4vh;
+}
+
