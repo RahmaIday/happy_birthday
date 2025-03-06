@@ -62,6 +62,11 @@ body{
     object-fit: contain;
 }
 
+
+.start-btn:hover{
+    cursor: pointer;
+}
+
 /* Balloons */
 @keyframes floatUp {
     0% {
