@@ -9,8 +9,9 @@ body{
     flex-direction: column;
     justify-content: space-between;
     background-color: #E9F4FF;
-    height: 80vh;
+    height: 100vh;
     padding: 10vh 0;
+    box-sizing: border-box;
     overflow: hidden;
 }
 
