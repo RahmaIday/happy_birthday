@@ -4,6 +4,12 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'oldFont'; 
+    src: url('./fonts/pixel-font-old.otf') format('opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
 
 @font-face {
     font-family: 'Arcade'; 
@@ -22,7 +28,7 @@
 .soccer-background {
     background-image: url('./images/Game_background.png');
     width: 100vw; /* Full viewport width */
-    height: 90vh; /* Full viewport height */
+    height: 80vh; /* Full viewport height */
     background-size: 100% 100%; /* Stretch width to fill, height adjusts automatically */
     background-position: top center;
     background-repeat: no-repeat;
@@ -53,6 +59,13 @@
     justify-content: space-between;
     align-items: center;
     background-color: #E6E8E5;
+}
+
+.footerBar{
+    width: 100vw;
+    height: 10vh;
+    background-color: #E6E8E5;
+
 }
 
 .nav-title{
@@ -89,6 +102,7 @@
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     z-index: 1000; /* Make sure it's on top of everything */
@@ -96,8 +110,14 @@
   
   .overlay-message {
     font-family: 'PixelFont';
-    font-size: 6vh;
+    font-size: 5vh;
     color: white;
     text-align: center;
+    padding: 0 10vh;
   }
-  
+
+  .cowboy_yasir {
+    padding-top: 2vh;
+    height: 30vh;
+    width: auto;
+}

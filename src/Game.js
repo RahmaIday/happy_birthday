@@ -2,12 +2,15 @@ import React, { useState, useEffect } from 'react';
 import './Game.css';
 import soccerball from './images/soccerball.svg';
 import goalie_yasir from './images/goalie_yasir.svg';
+import yasir from './images/yasir_hat.svg';
+import jumping_yasir from './images/jumping_cowboy_yasir.svg';
 
 function Game() {
   const [score, setScore] = useState(0);
   const [goalieX, setGoalieX] = useState(50); // Initially centered
   const [soccerBalls, setSoccerBalls] = useState([]);
   const [gameOver, setGameOver] = useState(false); // New state for game over
+  const [isJumping, setIsJumping] = useState(false); 
 
   useEffect(() => {
     // Set up event listeners for controlling goalie movement
@@ -88,6 +91,15 @@ function Game() {
     return () => clearInterval(gameInterval);
   }, [goalieX, score]);
 
+  // jumping effect 
+  useEffect(() => {
+    const jumpInterval = setInterval(() => {
+      setIsJumping((prev) => !prev); 
+    }, 700); // Toggle every 700ms
+
+    return () => clearInterval(jumpInterval);
+  }, []);
+
   return (
     <div>
       <div className="NavBar">
@@ -120,8 +132,23 @@ function Game() {
       {gameOver && (
         <div className="overlay">
           <div className="overlay-message">Congratulations!</div>
+          <div className="overlay-message">You have earned a cowboy hat</div>
+          <img 
+            src={isJumping ? yasir : jumping_yasir} 
+            className='cowboy_yasir' 
+            alt="Yasir"
+          />
+          <br></br>
+          <div className="overlay-message"> You are now officially a 20 year old cowboy! 
+          </div>
+          <div className="overlay-message">I made this game because you're always so fun and wholesome to be around 
+            so I hope it gave you a little fun in return. Thank you for playing and</div>
+          <div className="overlay-message"> Thank you for being you :D</div>
+          <img></img>
+
         </div>
       )}
+      <div className='footerBar'></div>
     </div>
   );
 }
