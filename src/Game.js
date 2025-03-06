@@ -140,16 +140,16 @@ function Game() {
         <div className="overlay">
           
           <div className="overlay-message">Congratulations!</div>
-          <div className="overlay-message">You have earned a cowboy hat</div>
+          <div className="overlay-message">I knew you could do it! You are now officially a 20 year old! </div>
+          <div className="overlay-message">And You have earned the ultimate item:</div>
+          <div className="overlay-message shiny-text">The Cowboy Hat</div>
           <img 
             src={isJumping ? yasir : jumping_yasir} 
             className='cowboy_yasir' 
             alt="Yasir"
           />
           <br></br>
-          <div className="overlay-message"> You are now officially a 20 year old! </div>
-          <div className="overlay-message">I made this game because you're always so fun and sweet to be around 
-            so I hope it gave you a little fun in return. Thank you for playing and</div>
+          <div className="overlay-message">I wanted to show my appreciation for all the fun and joy you bring. So I made this in hopes that it gives you some of that fun in return. Thank you for playing and</div>
           <div className="overlay-message"> Thank you for being you :D</div>
           <br></br>
           <img

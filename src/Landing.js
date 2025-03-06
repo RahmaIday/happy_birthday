@@ -96,7 +96,7 @@ function Landing() {
           className='start-btn'
           onMouseEnter={() => setButtonImage(button_pressed)}
           onMouseLeave={() => setButtonImage(button_normal)}
-          onClick={() => navigate('/happy_birthday/game')} 
+          onClick={() => navigate('/happy_birthday/info')} 
           src={buttonImage}
           alt="Start Button"
         />

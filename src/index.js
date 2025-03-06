@@ -5,6 +5,7 @@ import './index.css';
 import App from './App';
 import Game from './Game';
 import Landing from './Landing';
+import Info from './Info';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -15,6 +16,7 @@ root.render(
         <Route path="/happy_birthday" element={<Landing />} />
         <Route path="/happy_birthday/game" element={<Game />} />
         <Route path="/happy_birthday/app" element={<App />} />
+        <Route path="/happy_birthday/info" element={<Info />} />
       </Routes>
     </Router>
   </React.StrictMode>
