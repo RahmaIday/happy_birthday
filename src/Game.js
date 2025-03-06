@@ -41,7 +41,7 @@ function Game() {
         id: Date.now(),
         x: Math.random() * 100,
         y: 0,
-        speed: 1 + Math.random() * 2, // Random fall speed
+        speed: 0.5 + Math.random(), // Random fall speed: 1 + Math.random() * 2
       };
       setSoccerBalls((prevBalls) => [...prevBalls, newBall]);
     }, 1000); // New ball every second
@@ -63,7 +63,7 @@ function Game() {
               newY <= 90 &&
               Math.abs(ball.x - goalieX) < 5
             ) {
-              setScore((prevScore) => prevScore + 1);
+              setScore((prevScore) => prevScore + 0.5);
               return null; // Ball caught, set to null
             }
             // If ball reaches the bottom, remove it
