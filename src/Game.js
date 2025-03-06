@@ -4,6 +4,9 @@ import soccerball from './images/soccerball.svg';
 import goalie_yasir from './images/goalie_yasir.svg';
 import yasir from './images/yasir_hat.svg';
 import jumping_yasir from './images/jumping_cowboy_yasir.svg';
+import button_pressed from './images/backbtn-pressed.svg';
+import button_normal from './images/backbtn.svg';
+import { useNavigate } from 'react-router-dom'; 
 
 function Game() {
   const [score, setScore] = useState(0);
@@ -11,6 +14,8 @@ function Game() {
   const [soccerBalls, setSoccerBalls] = useState([]);
   const [gameOver, setGameOver] = useState(false); // New state for game over
   const [isJumping, setIsJumping] = useState(false); 
+  const [buttonImage, setButtonImage] = useState(button_normal);
+  const navigate = useNavigate(); 
 
   useEffect(() => {
     // Set up event listeners for controlling goalie movement
@@ -103,7 +108,7 @@ function Game() {
   return (
     <div>
       <div className="NavBar">
-        <div className="nav-title">Soccer Game</div>
+        <div className="nav-title">Game Start</div>
         <div className="scoreboard">
           <img className="soccer-logo" src={soccerball} alt="Soccer Ball" />
           <div className="score">{score}</div>
@@ -129,8 +134,10 @@ function Game() {
           />
         ))}
       </div>
+      <div className='footerBar'></div>
       {gameOver && (
         <div className="overlay">
+          
           <div className="overlay-message">Congratulations!</div>
           <div className="overlay-message">You have earned a cowboy hat</div>
           <img 
@@ -139,16 +146,20 @@ function Game() {
             alt="Yasir"
           />
           <br></br>
-          <div className="overlay-message"> You are now officially a 20 year old cowboy! 
-          </div>
-          <div className="overlay-message">I made this game because you're always so fun and wholesome to be around 
+          <div className="overlay-message"> You are now officially a 20 year old! </div>
+          <div className="overlay-message">I made this game because you're always so fun and sweet to be around 
             so I hope it gave you a little fun in return. Thank you for playing and</div>
           <div className="overlay-message"> Thank you for being you :D</div>
-          <img></img>
+          <br></br>
+          <img
+          className='back-btn'
+          onClick={() => navigate('/happy_birthday')} 
+          src={button_normal}
+          alt="Back Button"
+          />
 
         </div>
       )}
-      <div className='footerBar'></div>
     </div>
   );
 }

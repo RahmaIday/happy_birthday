@@ -33,21 +33,21 @@
     background-position: top center;
     background-repeat: no-repeat;
     position: relative;
-  }
+}
 
-  .goalie {
+.goalie {
     position: absolute;
     bottom: 0;
     left: 50%; /* Default to center */
     transform: translateX(-50%);
     height: 12vh; /* Adjust based on image size */
-  }
+}
   
-  .soccer-ball {
+.soccer-ball {
     position: absolute;
     width: 5vw; /* Adjust size as needed */
     height: 5vw; /* Adjust size as needed */
-  }
+}
   
   
 .NavBar{
@@ -106,18 +106,28 @@
     justify-content: center;
     align-items: center;
     z-index: 1000; /* Make sure it's on top of everything */
-  }
+    
+}
   
-  .overlay-message {
+.overlay-message {
     font-family: 'PixelFont';
     font-size: 5vh;
     color: white;
     text-align: center;
     padding: 0 10vh;
-  }
+}
 
-  .cowboy_yasir {
+.cowboy_yasir {
     padding-top: 2vh;
     height: 30vh;
     width: auto;
+}
+
+.back-btn{
+    width: 10vw;
+
+}
+
+.back-btn:hover{
+    cursor: pointer;
 }
