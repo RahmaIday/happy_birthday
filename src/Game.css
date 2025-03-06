@@ -22,11 +22,27 @@
 .soccer-background {
     background-image: url('./images/Game_background.png');
     width: 100vw; /* Full viewport width */
-    height: 90vh; /* Full viewport height (adjust as needed) */
+    height: 90vh; /* Full viewport height */
     background-size: 100% 100%; /* Stretch width to fill, height adjusts automatically */
-    background-position: top center; /* Ensures it stays centered */
-    background-repeat: no-repeat; /* Prevents tiling */
-}
+    background-position: top center;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  .goalie {
+    position: absolute;
+    bottom: 0;
+    left: 50%; /* Default to center */
+    transform: translateX(-50%);
+    height: 12vh; /* Adjust based on image size */
+  }
+  
+  .soccer-ball {
+    position: absolute;
+    width: 5vw; /* Adjust size as needed */
+    height: 5vw; /* Adjust size as needed */
+  }
+  
   
 .NavBar{
     width: 100vw;
