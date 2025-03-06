@@ -71,7 +71,7 @@ function Game() {
               newY <= 90 &&
               Math.abs(ball.x - goalieX) < 5
             ) {
-              setScore((prevScore) => prevScore + 0.5);
+              setScore((prevScore) => prevScore + 1);
               return null; // Ball caught, set to null
             }
             // If ball reaches the bottom, remove it
