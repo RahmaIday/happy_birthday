@@ -7,6 +7,7 @@ function Game() {
   const [score, setScore] = useState(0);
   const [goalieX, setGoalieX] = useState(50); // Initially centered
   const [soccerBalls, setSoccerBalls] = useState([]);
+  const [gameOver, setGameOver] = useState(false); // New state for game over
 
   useEffect(() => {
     // Set up event listeners for controlling goalie movement
@@ -35,22 +36,29 @@ function Game() {
   }, []);
 
   useEffect(() => {
-    // Generate soccer balls at random positions at the top of the screen
-    const interval = setInterval(() => {
-      const newBall = {
-        id: Date.now(),
-        x: Math.random() * 100,
-        y: 0,
-        speed: 0.5 + Math.random(), // Random fall speed: 1 + Math.random() * 2
-      };
-      setSoccerBalls((prevBalls) => [...prevBalls, newBall]);
-    }, 1000); // New ball every second
+    // Generate soccer balls at random positions at the top of the screen if the game is not over
+    if (!gameOver) {
+      const interval = setInterval(() => {
+        const newBall = {
+          id: Date.now(),
+          x: Math.random() * 100,
+          y: 0,
+          speed: 0.5 + Math.random(), // Random fall speed
+        };
+        setSoccerBalls((prevBalls) => [...prevBalls, newBall]);
+      }, 1000); // New ball every second
 
-    // Clean up interval
-    return () => clearInterval(interval);
-  }, []);
+      // Clean up interval
+      return () => clearInterval(interval);
+    }
+  }, [gameOver]);
 
   useEffect(() => {
+    if (score >= 20) {
+      setGameOver(true); // Set game over if score reaches 20
+      return;
+    }
+
     // Update soccer ball positions and check for collisions
     const gameInterval = setInterval(() => {
       setSoccerBalls((prevBalls) => {
@@ -78,7 +86,7 @@ function Game() {
 
     // Clean up interval
     return () => clearInterval(gameInterval);
-  }, [goalieX]);
+  }, [goalieX, score]);
 
   return (
     <div>
@@ -109,6 +117,11 @@ function Game() {
           />
         ))}
       </div>
+      {gameOver && (
+        <div className="overlay">
+          <div className="overlay-message">Congratulations!</div>
+        </div>
+      )}
     </div>
   );
 }
